@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<center><p>
+    <h2 style="margin-top: 20px;">New post</h2>
+    <form style="margin-top: 20px;" method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-light">Zapisz</button>
+    </form>
+
+</p></center>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+{% for post in posts %}
+
+
+<div class="card shadow-sm rounded" style="width: 70rem; margin-top: 50px">
+    <div class="card-body shadow">
+        <center><h3><a href="{% url 'post_detail' pk=post.pk %}" style="text-decoration:none; color: #222222">{{ post.title }}</a></h3>
+
+
+        <p style="color:grey; font-size:10px">Opublikowano: {{ post.published_date }}</p></center>
+                            
+        <p>{{ post.text|linebreaksbr }}</p>
+                            
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
+                
