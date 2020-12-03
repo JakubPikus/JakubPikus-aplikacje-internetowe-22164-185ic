@@ -25,7 +25,7 @@ SECRET_KEY = '2(118kyo4@ji9%q&zduwh8)9)*jm@u%2pm(m-ju8ry5qk$8285'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'localhost']
 
 
     
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sslserver',
     'social_django',
     'blog',
 ]
@@ -52,13 +53,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
     'social_core.backends.google.GoogleOAuth2',
     'social_core.backends.facebook.FacebookOAuth2',
-    'django.contrib.auth.backends.ModelBackend',
+    
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -143,6 +144,8 @@ LOGOUT_REDIRECT_URL = 'login'
 
 SOCIAL_AUTH_FACEBOOK_KEY = '417777099361405'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'f83da177043a407c72067e313a6a0e32'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = "1040907251562-2tunrhri6f71me20an2b960ig4f54agu.apps.googleusercontent.com"
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = "hXcSdfqXJ4CE7lLLDbQfmr8Q"
 
 
 
