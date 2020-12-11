@@ -38,15 +38,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites', 
+
     'drf_yasg',
     'rest_framework',
     'rest_framework.authtoken', 
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'django_filters',
     'dj_rest_auth',
     'dj_rest_auth.registration',
-    'posts.apps.PostsConfig', 
+    'posts',
+    #'posts.apps.PostsConfig', 
+    'mecze',
 ]
 
 REST_FRAMEWORK = {
@@ -59,6 +63,10 @@ REST_FRAMEWORK = {
         #'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.TokenAuthentication',
     ],
+
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend',
+        ]
 }
 
 
