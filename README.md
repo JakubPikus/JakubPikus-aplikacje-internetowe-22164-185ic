@@ -130,18 +130,102 @@
 
 
 
+# Lab3
+
+<br><br>
 
 
+<h3>Nowe okno logowania</h3>
+
+<img src="zrzuty/26.png" alt="base_login"  style="float: left;" />
+
+<p>Zostały umieszczone dodatkowe buttony, które umożliwiają zalogowanie się dzięki kontom na facebooku i google.</p>
 
 
+<h3>Logowanie facebookiem</h3>
+
+<img src="zrzuty/27.png" alt="fb_lg"  style="float: left;" />
+<br>
+<img src="zrzuty/28.png" alt="fb"  style="float: left;" />
+
+<h3>Logowanie google</h3>
+<br>
+<img src="zrzuty/29.png" alt="google_lg"  style="float: left;" />
+<br>
+<img src="zrzuty/30.png" alt="google"  style="float: left;" />
+
+# Lab4
+
+<br><br>
+
+<h3>Django REST framework</h3>
+<br>
+
+<img src="zrzuty/31.png" alt="drf"  style="float: left;" />
+
+<p>Na stronie został umieszczony DRF, dzięki któremu możemy zaoszczędzić wiele linijek kodu, używając gotowego narzędzia.</p>
+
+<h3>Zezwolenia</h3>
+
+<img src="zrzuty/32.png" alt="zezwolenia"  style="float: left;" />
+
+<p>Posty może edytować tylko ich autor.</p>
+
+<img src="zrzuty/33.png" alt="post_drf"  style="float: left;" />
+
+<p>Dodatkowo dla niezalogowanych użytkowników posty nie są widoczne.</p>
+
+<img src="zrzuty/39.png" alt="post_logout_drf"  style="float: left;" />
+
+<h3>Swagger</h3>
+
+<p>Czyli nic innego jak zestaw narzędzi, które pozwalają na wizualizację zasobów API i korzystanie z nich bez konieczności posiadania zewnętrznych aplikacji. Po zaznaczeniu opcji "Try it out" możemy modyfikować kod z poziomu strony.</p>
+
+<img src="zrzuty/34.png" alt="swagger"  style="float: left;" />
 
 
+# Lab6
 
+<br><br>
 
+<h3>Tokeny</h3>
 
+<img src="zrzuty/35.png" alt="token"  style="float: left;" />
 
+<p>Tokeny odpowiednio generują jednorazowe kody w panelu administratora.</p>
 
+<h3>Viewsets</h3>
 
+<p>Login.</p>
+<br>
+<img src="zrzuty/36.png" alt="vs_login"  style="float: left;" />
+<br>
 
+<p>Register.</p>
+<br>
+<img src="zrzuty/37.png" alt="vs_register"  style="float: left;" />
+<br>
 
+<p>User list.</p>
+<br>
+<img src="zrzuty/38.png" alt="vs_register"  style="float: left;" />
+<br>
+
+<h3>Router</h3>
+
+<p>Dodany zostały również router, który na pierwszy rzut oka nie wprowadza widocznych zmian, ale pozwala on zastąpić nasze urlpatternsy o wiele krótszym zapisem.</p>
+
+# Wprowadzone modyfikacje do Lab4/6
+
+<img src="zrzuty/40.png" alt="apiv2_logout"  style="float: left;" />
+
+<p>Została wprowadzona nowa aplikacja "mecze". Dostęp do niej mają tylko zalogowani użytkownicy</p>
+
+<img src="zrzuty/41.png" alt="apiv2_login"  style="float: left;" />
+
+<p>Dzięki możliwości filtrowania możemy wyszukać interesujący przez nas mecz.</p>
+
+<img src="zrzuty/42.png" alt="apiv2_filter"  style="float: left;" />
+
+<img src="zrzuty/43.png" alt="apiv2_filter_result"  style="float: left;" />
 
