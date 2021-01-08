@@ -1,0 +1,3 @@
+{"id":"xR30d2TMbqJnBjmt","command":"SET","arguments":"test_key 15"}
+{"id":"lh7ZKdUXMO3Jcez0","command":"APPEND","arguments":"test_key 11"}
+{"id":"cXibulQWDKHoASaT","command":"HGETALL","arguments":"test_hash"}
