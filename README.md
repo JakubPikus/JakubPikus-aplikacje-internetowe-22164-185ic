@@ -347,13 +347,27 @@ Wystarczy użyć następującej komendy, która wyciąga wartości style diva o 
 
 <h5>4 - Pierwsze zbiory</h5>
 
-
+<p>Dzięki SADD dodajemy elementy do zbioru, a SMEMBERS odczytuje je,</p>
 
 
 <img src="Lab7/zrzuty/4a.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Za pomocą ZADD oprócz zwykłego dodania elementu, ustalamy też jego "wagę". ZRANGE zwróci nam posortowany zbiór względem właśnie tych wag. Możemy również i tu określiś zakres naszego sortowania, edytując odpowiednio wartości 1 i -1 na postać interesujących nas zakresu indeksów.</p>
+
 <img src="Lab7/zrzuty/4b.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h5>5 - Implementacja</h5>
+
+<p>Dany kod nasłuchuje o kolejnych nowo wprowadzonych komunikatach w danym kanale. Pierwszy, "powitalny" mówi nam o sukcesywnym podłączeniu się. Każdy kolejny nowy komunikat będzie odrazu pojawiał się po dodaniu.</p>
+
 <img src="Lab7/zrzuty/5a.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Możliwe jest również podłączenie się pod pattern poleceniem ".psubscribe". Pozwala nam to na dodawanie nowych elementów na różne kanały.</p>
+
 <img src="Lab7/zrzuty/5b.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h5>6 - Strumienie</h5>
+
 <img src="Lab7/zrzuty/6a.png" alt="apiv2_filter_result"  style="float: left;" />
 <img src="Lab7/zrzuty/6b.png" alt="apiv2_filter_result"  style="float: left;" />
 <img src="Lab7/zrzuty/7.png" alt="apiv2_filter_result"  style="float: left;" />
