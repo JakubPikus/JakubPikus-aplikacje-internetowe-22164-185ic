@@ -294,11 +294,25 @@ Wystarczy użyć następującej komendy, która wyciąga wartości style diva o 
 
 
 <h3>Python + Redis + Django</h3>
+<br><br>
 
+<h3>Zadania z artykułów</h3>
+<br><br>
+
+<h5>1 - Ping</h5>
+
+<p>Sprawdzanie połączenia z redisem. Redis jest uruchomiony na standardowym porcie 6379, więc wystarczy polecenie "Redis()". W przeciwnym wypadku korzystamy z następującego wzoru "Redis(host='', port='', db='')".</p>
 
 <img src="Lab7/zrzuty/1.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h5>2 - Pierwsze klucze i wartości</h5>
+
+<p>Redis automatycznie koduje naszą wartość jako ciąg bajtów, stąd naszej b'' przy odpowiedzi. Aby uzyskać czystego stringa musimy naszą wartość odkodować dzięki poleceniu "Redis(decode_responses=True)"</p>
+
 <img src="Lab7/zrzuty/2a.png" alt="apiv2_filter_result"  style="float: left;" />
-<img src="Lab7/zrzuty/2b.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/2b.png" alt="apiv2_filter_result"  style="float: left;" /><br>
+
+
 <img src="Lab7/zrzuty/2c.png" alt="apiv2_filter_result"  style="float: left;" />
 <img src="Lab7/zrzuty/2d.png" alt="apiv2_filter_result"  style="float: left;" />
 <img src="Lab7/zrzuty/3a.png" alt="apiv2_filter_result"  style="float: left;" />
