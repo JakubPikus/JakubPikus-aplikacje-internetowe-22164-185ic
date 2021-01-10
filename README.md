@@ -283,3 +283,52 @@ Wystarczy użyć następującej komendy, która wyciąga wartości style diva o 
 
 <img src="zrzuty/43.png" alt="apiv2_filter_result"  style="float: left;" />
 
+
+
+
+
+
+# Lab7
+
+<br><br>
+
+
+<h3>Python + Redis + Django</h3>
+
+
+<img src="Lab7/zrzuty/1.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/2a.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/2b.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/2c.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/2d.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/3a.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/3b.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/3c.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/3c1.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/3d.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/3e.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/3f.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/4a.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/4b.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/5a.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/5b.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/6a.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/6b.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/7.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/8a.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/8b.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/8c.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/8d.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/8e.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/9a.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/10.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/11.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/12.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/13.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/14.png" alt="apiv2_filter_result"  style="float: left;" />
+
+
+
+
+
+
