@@ -37,11 +37,14 @@ def make_thumbnails(file_path, thumbnails=[]):
 
 @shared_task(name='notifiction')
 def send_notifiction():
-     print('Hello World')
-     # Another trick
+     print('Godzina 20:45')
 
 
-@shared_task(name='summary') 
+@shared_task(name='summary1') 
 def send_import_summary():
-    print('Hello every 10 sec')
+    print('Odśwież co 5 sekund')
+
+@shared_task(name='summary2') 
+def send_import_summary():
+    print('Odśwież co 10 sekund')
 

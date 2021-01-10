@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <div class="accordion" id="accordionExample" style="text-align: center">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Przykłady z zajęć
+              </button>
+            </h2>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+
+                <div class="twoRemPaddig">
+                    <div class="row">
+
+                        <div class="col-3">
+                            <div class="card" >
+                                <div class="card-body" style="height: 381px">
+                                    <h3>Przykład 1</h3>
+                                    <p class="text-muted">Najnowsze spolszczenie</p><br><br>
+                                    <span>{{first_h2_text}}</span><br><br><br><br>
+                                    <b class="card-text">Ilość tagów (h2): </b> {{all_h2_tagslen}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <div class="card">
+                                <div class="card-body" >
+                                    <h3>Przykład 2</h3>
+                                    <ul class="list-group list-group-flush">
+                                        {% for items in top_items  %}
+                                        <li class="list-group-item">
+                                            <h5>{{items.title}}</h5>
+                                            <a>{{items.content}}</a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-3">
+                            <div class="card" >
+                                <div class="card-body">
+
+                                    <h3>Przykład 3</h3>
+                                    <ul class="list-group list-group-flush">
+                                        {% for im in image_data %}
+                                        <li class="list-group-item">
+                                            <b>Photo_src: </b> <br> {{im.src}}<br>
+                                            <b>Title: </b> <br> {{im.title}}
+                                        </li>
+                                        {% endfor %}
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <div class="card" >
+                                <div class="card-body">
+                                    <h3>Przykład 4</h3>
+                                    <ul class="list-group list-group-flush">
+                                    
+                                    
+                                        {% for produkt in all_products %}
+                                        <li class="list-group-item">
+                                            <b>Title: </b> {{produkt.name}} <br><br>
+                                            <b> {{produkt.platform}}</b><br><br><br>
+                                            <b>Photo: </b> {{produkt.image}}
+                                       </li>
+                                        
+                                     {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Scraping
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+                <div class="col-12">
+                    <div class="card" >
+                        <div class="card-body">
+
+
+                            <form method="POST">
+                                {% csrf_token %}
+                                
+                                <div class="row justify-content-center" >
+                                    <h3>Podaj URL - </h3>
+                                    <input type="text" name="web_link" required>
+                                </div>
+                                <br><br>
+
+                                <div class="row justify-content-center">
+                                    <h3>Podaj szukany element - </h3>    
+                                    <input type="text" name="element" required>
+                                </div>
+                                <br>
+                                <button type="submit" class="btn btn-primary">Szukaj</button><br><br>
+                            </form>
+
+                            <div class="row justify-content-center">
+                                <h6>Element - </h6>{{ element }}<br>
+                            </div>
+                            <div class="row justify-content-center">
+                                <h6>Liczba elementów - </h6>{{amount}}<br>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+
+
+                    <div class="card" >
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+
+                           
+    
+                            {% for i in all_elements %}
+
+                                
+                                <h3>Element {{i.index}}</h3>
+                                
+                                {% if i.find_id != "Brak" %}
+                                    <h6>ID<h6>{{i.find_id}}<br><br>  
+                                {% endif %}
+
+                                {% if i.find_class != "Brak" %}
+                                    <h6>KLASA<h6>{{i.find_class}}<br><br>  
+                                {% endif %}
+                   
+
+                                {% if i.find_href != "Brak" %}
+                                    <h6>LINK<h6>{{i.find_href}}<br><br>  
+                                {% endif %}
+                   
+                                {% if i.get_text != "Brak" %}
+                                    <h6>TEXT<h6>{{i.get_text}}<br><br>  
+                                {% endif %}
+
+                                {% if i.find_src != "Brak" %}
+                                    <h6>SRC<h6>{{i.find_src}}<br><br>  
+                                {% endif %}
+
+                                {% if i.find_alt != "Brak" %}
+                                    <h6>ALT<h6>{{i.find_alt}}<br><br>  
+                                {% endif %}     
+
+                                {% empty %}
+                                    <h6>Brak danych do wyświetlenia<h6><br> 
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    xPath
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="col-12">
+                        <div class="card" >
+                            <div class="card-body">
+                                <h3>Element pobrany przy pomocy xPath</h3>
+                                <h6>Pobrany element<h6>{{lxml1}}<br><br> 
+
+                                <h3>Element pobrany przy pomocy Klasy</h3>
+                                <h6>Pobrany element<h6>{{lxml2}} <br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+{% endblock %}

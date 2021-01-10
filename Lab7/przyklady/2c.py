@@ -11,5 +11,5 @@ print(redis_connection.get(key))
 redis_connection.append(key,"   append")
 print(redis_connection.get(key))
 
-redis_connection.delete(key)
-print(redis_connection.get(key))
+#redis_connection.delete(key)
+#print(redis_connection.get(key))

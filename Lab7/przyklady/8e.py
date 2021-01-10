@@ -1,8 +1,8 @@
 from redis import Redis
 
-redis_connection = Redis(decode_responses=True, db=0)
+redis_connection = Redis(decode_responses=True)
 
-redis_connection.set("key1",10)
+redis_connection.set("key1",7)
 
 script ="""
 local arg1 = redis.call('get','key1')
