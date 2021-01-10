@@ -368,15 +368,31 @@ Wystarczy użyć następującej komendy, która wyciąga wartości style diva o 
 
 <h5>6 - Strumienie</h5>
 
+<p>Poniższy kod doda do strumienia słownik i odczyta z niego, podaną w parametrze count ilość elementów. Parametr block określa czy i jeśli tak, to na ile milisekund, funkcja ta ma być blokując. Umożliwia to używanie jej w pętli. Nazwa strumienia do którego się podłączamy to słownik, którego kluczem jest nazwa strumienia a wartością ID od którego chcemy dane odczytywać. </p>
+
 <img src="Lab7/zrzuty/6a.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Kod przedstawia utrzymanie elementów tak aby nie ginęły</p>
+
 <img src="Lab7/zrzuty/6b.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h5>7 - Pipelining</h5>
+
+<p>Stmt1 to podejście naiwne, a stmt2 to podejście używające pipeling’u. Jeden z pozytywnych efektów jest fakt, że proces wykonywania operacji został o wiele przyspieszony.</p>
+
 <img src="Lab7/zrzuty/7.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h5>8 - Lua</h5>
+
 <img src="Lab7/zrzuty/8a.png" alt="apiv2_filter_result"  style="float: left;" />
 <img src="Lab7/zrzuty/8b.png" alt="apiv2_filter_result"  style="float: left;" />
 <img src="Lab7/zrzuty/8c.png" alt="apiv2_filter_result"  style="float: left;" />
 <img src="Lab7/zrzuty/8d.png" alt="apiv2_filter_result"  style="float: left;" />
 <img src="Lab7/zrzuty/8e.png" alt="apiv2_filter_result"  style="float: left;" />
 <img src="Lab7/zrzuty/9a.png" alt="apiv2_filter_result"  style="float: left;" />
+
+
+
 <img src="Lab7/zrzuty/10.png" alt="apiv2_filter_result"  style="float: left;" />
 <img src="Lab7/zrzuty/11.png" alt="apiv2_filter_result"  style="float: left;" />
 <img src="Lab7/zrzuty/12.png" alt="apiv2_filter_result"  style="float: left;" />
