@@ -388,11 +388,11 @@ Wystarczy użyć następującej komendy, która wyciąga wartości style diva o 
 
 <img src="Lab7/zrzuty/8a.png" alt="apiv2_filter_result"  style="float: left;" />
 
-<p>Określamy tutaj że dwa pierwsze parametry będą dostępne w skrypcie w tabeli KEYS a kolejne – w tabeli ARGV. Sam skrypt odczytuje przekazane dane i zwraca je jako tablicę.</p>
+<p>Określamy tutaj że dwa pierwsze parametry będą dostępne w skrypcie w tabeli KEYS a kolejne – w tabeli ARGV. Sam skrypt odczytuje przekazane dane i zwraca je jako tablicę. Druga wartość określona w eval określa nam ilość parametrów. Następnie przypisujemy klucze oraz wartości.</p>
 
 <img src="Lab7/zrzuty/8b.png" alt="apiv2_filter_result"  style="float: left;" />
 
-<p>Przykład pracy na nieco rozszerzonym kodzie - tworzenie listy. Druga wartość określona w eval określa nam ilość parametrów. Następnie przypisujemy klucze oraz wartości.</p>
+<p>Przykład pracy na nieco rozszerzonym kodzie - tworzenie listy.</p>
 
 <img src="Lab7/zrzuty/8c.png" alt="apiv2_filter_result"  style="float: left;" />
 
