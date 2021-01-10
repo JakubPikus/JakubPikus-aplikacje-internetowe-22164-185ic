@@ -384,19 +384,53 @@ Wystarczy użyć następującej komendy, która wyciąga wartości style diva o 
 
 <h5>8 - Lua</h5>
 
+<p>EVAL przekazuje ciało "script" do wykonania. Dany kod zwróci nam wiadomość "sprawdzenie".</p>
+
 <img src="Lab7/zrzuty/8a.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Określamy tutaj że dwa pierwsze parametry będą dostępne w skrypcie w tabeli KEYS a kolejne – w tabeli ARGV. Sam skrypt odczytuje przekazane dane i zwraca je jako tablicę.</p>
+
 <img src="Lab7/zrzuty/8b.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Przykład pracy na nieco rozszerzonym kodzie - tworzenie listy. Druga wartość określona w eval określa nam ilość parametrów. Następnie przypisujemy klucze oraz wartości.</p>
+
 <img src="Lab7/zrzuty/8c.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Praca z formatem danych JSON.</p>
+
 <img src="Lab7/zrzuty/8d.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Dany skrypt zapisuje wynik w key2. Jest to dodanie arg1 (czyli wartości pobranej z key1) z argumentem podanym przy .eval, w naszym przypadku 5. Return nil zwraca nam None, a wywołanie key2 zwróci nam wynik procesu dodawania.</p>
+
 <img src="Lab7/zrzuty/8e.png" alt="apiv2_filter_result"  style="float: left;" />
-<img src="Lab7/zrzuty/9a.png" alt="apiv2_filter_result"  style="float: left;" />
 
+<h5>9 - Notyfikacje redisowe</h5>
 
+<p>Program który będzie nasłuchiwał na każdą zmianę klucza.</p>
+
+<img src="Lab7/zrzuty/9a.png" alt="apiv2_filter_result"  style="float: left;" /><br><br>
+
+<h3>Thumbnail</h3>
+<br><br>
 
 <img src="Lab7/zrzuty/10.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Po przesłaniu zdjęcia dostajemy zip'a z oryginalnym zdjęciem oraz tym przekonwertowanym do rozdzielczości 128x128</p>
+
 <img src="Lab7/zrzuty/11.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Zapis wykonania procesu w oknie z Celery</p>
+
 <img src="Lab7/zrzuty/12.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h3>Celery Beat</h3>
+
+<p>Do wykonania naszych tasków wymagana jest praca na 4 wierszach poleceń. W jednym mamy włączony nasz serwer związany z aplikacją, w drugim redis-server, w trzecim aktywujemy celery, a w czwartym wywołujemy nasze taski do wykonania</p>
+
 <img src="Lab7/zrzuty/13.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Taski</p>
+
 <img src="Lab7/zrzuty/14.png" alt="apiv2_filter_result"  style="float: left;" />
 
 
