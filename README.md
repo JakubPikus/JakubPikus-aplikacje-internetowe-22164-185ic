@@ -184,6 +184,60 @@
 <img src="zrzuty/34.png" alt="swagger"  style="float: left;" />
 
 
+# Lab5
+
+<br><br>
+
+
+<h3>Web Scraping</h3>
+
+<img src="Lab5/zrzuty/1.png" alt="base_login"  style="float: left;" />
+
+<p>Strona jaką użyłem do przetestowania WebScrapingu to https://grajpopolsku.pl/</p>
+
+<h3>Przykłady z zajęć</h3>
+
+<p>Przykład nr 1 wskazuje nam ilość elementów h2, czyli tytułów spolszczeń. Wyciąga nam najnowsze dodane spolszczenie.</p>
+
+<img src="Lab5/zrzuty/4.png" alt="base_login"  style="float: left;" />
+
+<p>Przykład nr 2 wyciąga tytuły oraz opisy spolszczeń ze strony głównej. Dla estetyki użyłem "list-group-flush".</p>
+
+
+
+<p>Podczas robienia przykładu 3 zauważyłem, że wyżej mymieniona strona ma podpięte zdjęcie do div'a, a nie wstawione jako img
+Wystarczy użyć następującej komendy, która wyciąga wartości style diva o konkretnej klasie, następnie cssutils odrzuca wszystkie oprócz wartości background, a na końcu usuwamy "url(" i ")" z wcześniej wspomnianej wartości. Finalnie dostajemy czysty link do zdjęcia gier na psp oraz ich tytuły.<p>
+  
+<img src="Lab5/zrzuty/5.png" alt="base_login"  style="float: left;" />
+  
+<img src="Lab5/zrzuty/divimg.png" alt="base_login"  style="float: left;" />
+
+<p>Przykład nr 4 bazuje na alfabetycznym spisie wszystkich spolszczeń. Dostajemy informacje o danej platformie, na którą są przeznaczone dane pliki</p>
+
+<h3>Scraping</h3>
+
+<p>Polega na wyciąganiu konkretnych elementów z podanej strony oraz wypisaniu ich. Dla przykładu użyłem podlink wikipedii i elementów p</p>
+
+<img src="Lab5/zrzuty/2.png" alt="base_login"  style="float: left;" />
+
+<h3>xPath i Klasa</h3>
+
+
+<p>Jako przykład do xPath użyłem ponownie jednego z opisów ze strony głównej. Dla ułatwienia wybieramy opcję Copy -> full XPath</p>
+
+<img src="Lab5/zrzuty/6xpath.png" alt="base_login"  style="float: left;" />
+
+<p>Przykładowa klasa opiera się o klase "title-span" czyli informacja o like na facebooku</p>
+
+<img src="Lab5/zrzuty/7class.png" alt="base_login"  style="float: left;" />
+
+<p>Efekt końcowy</p>
+
+<img src="Lab5/zrzuty/3.png" alt="base_login"  style="float: left;" />
+
+
+
+
 # Lab6
 
 <br><br>
