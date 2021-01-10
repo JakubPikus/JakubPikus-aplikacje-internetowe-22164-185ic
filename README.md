@@ -323,7 +323,7 @@ Wystarczy użyć następującej komendy, która wyciąga wartości style diva o 
 
 <h5>3 - Pierwsze listy</h5>
 
-<p>Komendy LPUSH i RPUSH pozwalają nam na dopisanie danych do listy, pierwsza dopisuje wartości z lewej strony, druga z prawej. Aby utworzyć tą samą listę poleceniem RPUSH, musielibyśmy zamienić kolejność pushowania int'ów. LRANGE pobiera nasze wartości zależnie od podania w następnej kolejności indeksów, więc jeśli podamy od 0 do -1 - pobierze nam całą listę.</p>
+<p>Komendy LPUSH i RPUSH pozwalają nam na dopisanie danych do listy, pierwsza dopisuje wartości z lewej strony, druga z prawej. Aby utworzyć tą samą listę poleceniem RPUSH, musielibyśmy zamienić kolejność pushowania int'ów. LRANGE pobiera nasze wartości zależnie od podania w następnej kolejności zakresu indeksów, więc jeśli podamy od 0 do -1 - pobierze nam całą listę.</p>
 
 <img src="Lab7/zrzuty/3a.png" alt="apiv2_filter_result"  style="float: left;" />
 <img src="Lab7/zrzuty/3b.png" alt="apiv2_filter_result"  style="float: left;" />
