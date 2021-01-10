@@ -205,7 +205,7 @@
 
 
 
-<p>Podczas robienia przykładu 3 zauważyłem, że wyżej mymieniona strona ma podpięte zdjęcie do div'a, a nie wstawione jako img
+<p>Podczas robienia przykładu 3 zauważyłem, że wyżej wymieniona strona ma podpięte zdjęcie do div'a, a nie wstawione jako img
 Wystarczy użyć następującej komendy, która wyciąga wartości style diva o konkretnej klasie, następnie cssutils odrzuca wszystkie oprócz wartości background, a na końcu usuwamy "url(" i ")" z wcześniej wspomnianej wartości. Finalnie dostajemy czysty link do zdjęcia gier na psp oraz ich tytuły.<p>
   
 <img src="Lab5/zrzuty/5.png" alt="base_login"  style="float: left;" />
