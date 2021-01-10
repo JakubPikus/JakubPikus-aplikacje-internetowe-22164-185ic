@@ -307,21 +307,49 @@ Wystarczy użyć następującej komendy, która wyciąga wartości style diva o 
 
 <h5>2 - Pierwsze klucze i wartości</h5>
 
-<p>Redis automatycznie koduje naszą wartość jako ciąg bajtów, stąd naszej b'' przy odpowiedzi. Aby uzyskać czystego stringa musimy naszą wartość odkodować dzięki poleceniu "Redis(decode_responses=True)"</p>
+<p>Redis automatycznie koduje naszą wartość jako ciąg bajtów, stąd nasze b'' przy odpowiedzi. Aby uzyskać czystego stringa musimy naszą wartość odkodować dzięki poleceniu "Redis(decode_responses=True)"</p>
 
 <img src="Lab7/zrzuty/2a.png" alt="apiv2_filter_result"  style="float: left;" />
-<img src="Lab7/zrzuty/2b.png" alt="apiv2_filter_result"  style="float: left;" /><br>
+<img src="Lab7/zrzuty/2b.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Aby dołączyć do istniejącej wartości zadany string, używamy append. Postać zahashowana czyli redis_connection.delete(key) pozwala nam na usunięcie klucza</p>
 
 
 <img src="Lab7/zrzuty/2c.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Aby wykonać równania matematyczne na wartościach int, możemy skorzystać z .incr, który dodaje nam konkretną wartość do klucza, analogicznie .decr działa jako odejmowanie.  Wartości się nadpisują, nie jest pobierana ciągle wartość startowa klucza.</p>
+
 <img src="Lab7/zrzuty/2d.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h5>3 - Pierwsze listy</h5>
+
+<p>Komendy LPUSH i RPUSH pozwalają nam na dopisanie danych do listy, pierwsza dopisuje wartości z lewej strony, druga z prawej. Aby utworzyć tą samą listę poleceniem RPUSH, musielibyśmy zamienić kolejność pushowania int'ów. LRANGE pobiera nasze wartości zależnie od podania w następnej kolejności indeksów, więc jeśli podamy od 0 do -1 - pobierze nam całą listę.</p>
+
 <img src="Lab7/zrzuty/3a.png" alt="apiv2_filter_result"  style="float: left;" />
 <img src="Lab7/zrzuty/3b.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Wywołanie BRPOP skutkuje blokadą programu. Kod zapętla się, pobierając wszystkie elementy i po ostatnim – blokuje program. Po dodaniu nowego elementu, odrazu dostaniemy o tym informacje.</p>
+
 <img src="Lab7/zrzuty/3c.png" alt="apiv2_filter_result"  style="float: left;" />
 <img src="Lab7/zrzuty/3c1.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Możliwe jest dodawanie kluczy do konkretnych baz. Opisujemy to w "Redis()".</p>
+
 <img src="Lab7/zrzuty/3d.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Za pomocą polecenia SETEX możliwe jest ustawienie żywotności klucza. W danym przypadku żywotność klucza ustawiona jest na 30 sekund. Po 5 oraz 10 sekundach nasz klucz ciągle będzie zwracał odpowiednią wartość, lecz później dostaniemy informacje "None"</p>
+
 <img src="Lab7/zrzuty/3e.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>SETEX jest skrótem od połączenia komend "SET" oraz "EXPIRE". Efekt końcowy pozostanie ten sam, jeśli będziemy chcieli rozbić jedną komende na dwie.</p>
+
 <img src="Lab7/zrzuty/3f.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h5>4 - Pierwsze zbiory</h5>
+
+
+
+
 <img src="Lab7/zrzuty/4a.png" alt="apiv2_filter_result"  style="float: left;" />
 <img src="Lab7/zrzuty/4b.png" alt="apiv2_filter_result"  style="float: left;" />
 <img src="Lab7/zrzuty/5a.png" alt="apiv2_filter_result"  style="float: left;" />
