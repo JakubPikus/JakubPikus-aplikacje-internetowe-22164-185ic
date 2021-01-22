@@ -184,6 +184,60 @@
 <img src="zrzuty/34.png" alt="swagger"  style="float: left;" />
 
 
+# Lab5
+
+<br><br>
+
+
+<h3>Web Scraping</h3>
+
+<img src="Lab5/zrzuty/1.png" alt="base_login"  style="float: left;" />
+
+<p>Strona jaką użyłem do przetestowania WebScrapingu to https://grajpopolsku.pl/</p>
+
+<h3>Przykłady z zajęć</h3>
+
+<p>Przykład nr 1 wskazuje nam ilość elementów h2, czyli tytułów spolszczeń. Wyciąga nam najnowsze dodane spolszczenie.</p>
+
+<img src="Lab5/zrzuty/4.png" alt="base_login"  style="float: left;" />
+
+<p>Przykład nr 2 wyciąga tytuły oraz opisy spolszczeń ze strony głównej. Dla estetyki użyłem "list-group-flush".</p>
+
+
+
+<p>Podczas robienia przykładu 3 zauważyłem, że wyżej wymieniona strona ma podpięte zdjęcie do div'a, a nie wstawione jako img
+Wystarczy użyć następującej komendy, która wyciąga wartości style diva o konkretnej klasie, następnie cssutils odrzuca wszystkie oprócz wartości background, a na końcu usuwamy "url(" i ")" z wcześniej wspomnianej wartości. Finalnie dostajemy czysty link do zdjęcia gier na psp oraz ich tytuły.<p>
+  
+<img src="Lab5/zrzuty/5.png" alt="base_login"  style="float: left;" />
+  
+<img src="Lab5/zrzuty/divimg.png" alt="base_login"  style="float: left;" />
+
+<p>Przykład nr 4 bazuje na alfabetycznym spisie wszystkich spolszczeń. Dostajemy informacje o danej platformie, na którą są przeznaczone dane pliki</p>
+
+<h3>Scraping</h3>
+
+<p>Polega na wyciąganiu konkretnych elementów z podanej strony oraz wypisaniu ich. Dla przykładu użyłem podlink wikipedii i elementów p</p>
+
+<img src="Lab5/zrzuty/2.png" alt="base_login"  style="float: left;" />
+
+<h3>xPath i Klasa</h3>
+
+
+<p>Jako przykład do xPath użyłem ponownie jednego z opisów ze strony głównej. Dla ułatwienia wybieramy opcję Copy -> full XPath</p>
+
+<img src="Lab5/zrzuty/6xpath.png" alt="base_login"  style="float: left;" />
+
+<p>Przykładowa klasa opiera się o klase "title-span" czyli informacja o like na facebooku</p>
+
+<img src="Lab5/zrzuty/7class.png" alt="base_login"  style="float: left;" />
+
+<p>Efekt końcowy</p>
+
+<img src="Lab5/zrzuty/3.png" alt="base_login"  style="float: left;" />
+
+
+
+
 # Lab6
 
 <br><br>
@@ -228,4 +282,159 @@
 <img src="zrzuty/42.png" alt="apiv2_filter"  style="float: left;" />
 
 <img src="zrzuty/43.png" alt="apiv2_filter_result"  style="float: left;" />
+
+
+
+
+
+
+# Lab7
+
+<br><br>
+
+
+<h3>Python + Redis + Django</h3>
+<br><br>
+
+<h3>Zadania z artykułów</h3>
+<br><br>
+
+<h5>1 - Ping</h5>
+
+<p>Sprawdzanie połączenia z redisem. Redis jest uruchomiony na standardowym porcie 6379, więc wystarczy polecenie "Redis()". W przeciwnym wypadku korzystamy z następującego wzoru "Redis(host='', port='', db='')".</p>
+
+<img src="Lab7/zrzuty/1.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h5>2 - Pierwsze klucze i wartości</h5>
+
+<p>Redis automatycznie koduje naszą wartość jako ciąg bajtów, stąd nasze b'' przy odpowiedzi. Aby uzyskać czystego stringa musimy naszą wartość odkodować dzięki poleceniu "Redis(decode_responses=True)"</p>
+
+<img src="Lab7/zrzuty/2a.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/2b.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Aby dołączyć do istniejącej wartości zadany string, używamy append. Postać zahashowana czyli redis_connection.delete(key) pozwala nam na usunięcie klucza</p>
+
+
+<img src="Lab7/zrzuty/2c.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Aby wykonać równania matematyczne na wartościach int, możemy skorzystać z .incr, który dodaje nam konkretną wartość do klucza, analogicznie .decr działa jako odejmowanie.  Wartości się nadpisują, nie jest pobierana ciągle wartość startowa klucza.</p>
+
+<img src="Lab7/zrzuty/2d.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h5>3 - Pierwsze listy</h5>
+
+<p>Komendy LPUSH i RPUSH pozwalają nam na dopisanie danych do listy, pierwsza dopisuje wartości z lewej strony, druga z prawej. Aby utworzyć tą samą listę poleceniem RPUSH, musielibyśmy zamienić kolejność pushowania int'ów. LRANGE pobiera nasze wartości zależnie od podania w następnej kolejności zakresu indeksów, więc jeśli podamy od 0 do -1 - pobierze nam całą listę.</p>
+
+<img src="Lab7/zrzuty/3a.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/3b.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Wywołanie BRPOP skutkuje blokadą programu. Kod zapętla się, pobierając wszystkie elementy i po ostatnim – blokuje program. Po dodaniu nowego elementu, odrazu dostaniemy o tym informacje.</p>
+
+<img src="Lab7/zrzuty/3c.png" alt="apiv2_filter_result"  style="float: left;" />
+<img src="Lab7/zrzuty/3c1.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Możliwe jest dodawanie kluczy do konkretnych baz. Opisujemy to w "Redis()".</p>
+
+<img src="Lab7/zrzuty/3d.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Za pomocą polecenia SETEX możliwe jest ustawienie żywotności klucza. W danym przypadku żywotność klucza ustawiona jest na 30 sekund. Po 5 oraz 10 sekundach nasz klucz ciągle będzie zwracał odpowiednią wartość, lecz później dostaniemy informacje "None"</p>
+
+<img src="Lab7/zrzuty/3e.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>SETEX jest skrótem od połączenia komend "SET" oraz "EXPIRE". Efekt końcowy pozostanie ten sam, jeśli będziemy chcieli rozbić jedną komende na dwie.</p>
+
+<img src="Lab7/zrzuty/3f.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h5>4 - Pierwsze zbiory</h5>
+
+<p>Dzięki SADD dodajemy elementy do zbioru, a SMEMBERS odczytuje je,</p>
+
+
+<img src="Lab7/zrzuty/4a.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Za pomocą ZADD oprócz zwykłego dodania elementu, ustalamy też jego "wagę". ZRANGE zwróci nam posortowany zbiór względem właśnie tych wag. Możemy również i tu określiś zakres naszego sortowania, edytując odpowiednio wartości 1 i -1 na postać interesujących nas zakresu indeksów.</p>
+
+<img src="Lab7/zrzuty/4b.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h5>5 - Implementacja</h5>
+
+<p>Dany kod nasłuchuje o kolejnych nowo wprowadzonych komunikatach w danym kanale. Pierwszy, "powitalny" mówi nam o sukcesywnym podłączeniu się. Każdy kolejny nowy komunikat będzie odrazu pojawiał się po dodaniu.</p>
+
+<img src="Lab7/zrzuty/5a.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Możliwe jest również podłączenie się pod pattern poleceniem ".psubscribe". Pozwala nam to na dodawanie nowych elementów na różne kanały.</p>
+
+<img src="Lab7/zrzuty/5b.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h5>6 - Strumienie</h5>
+
+<p>Poniższy kod doda do strumienia słownik i odczyta z niego, podaną w parametrze count ilość elementów. Parametr block określa czy i jeśli tak, to na ile milisekund, funkcja ta ma być blokując. Umożliwia to używanie jej w pętli. Nazwa strumienia do którego się podłączamy to słownik, którego kluczem jest nazwa strumienia a wartością ID od którego chcemy dane odczytywać. </p>
+
+<img src="Lab7/zrzuty/6a.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Kod przedstawia utrzymanie elementów tak aby nie ginęły</p>
+
+<img src="Lab7/zrzuty/6b.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h5>7 - Pipelining</h5>
+
+<p>Stmt1 to podejście naiwne, a stmt2 to podejście używające pipeling’u. Jeden z pozytywnych efektów jest fakt, że proces wykonywania operacji został o wiele przyspieszony.</p>
+
+<img src="Lab7/zrzuty/7.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h5>8 - Lua</h5>
+
+<p>EVAL przekazuje ciało "script" do wykonania. Dany kod zwróci nam wiadomość "sprawdzenie".</p>
+
+<img src="Lab7/zrzuty/8a.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Określamy tutaj że dwa pierwsze parametry będą dostępne w skrypcie w tabeli KEYS a kolejne – w tabeli ARGV. Sam skrypt odczytuje przekazane dane i zwraca je jako tablicę. Druga wartość określona w eval określa nam ilość parametrów. Następnie przypisujemy klucze oraz wartości.</p>
+
+<img src="Lab7/zrzuty/8b.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Przykład pracy na nieco rozszerzonym kodzie - tworzenie listy.</p>
+
+<img src="Lab7/zrzuty/8c.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Praca z formatem danych JSON.</p>
+
+<img src="Lab7/zrzuty/8d.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Dany skrypt zapisuje wynik w key2. Jest to dodanie arg1 (czyli wartości pobranej z key1) z argumentem podanym przy .eval, w naszym przypadku 5. Return nil zwraca nam None, a wywołanie key2 zwróci nam wynik procesu dodawania.</p>
+
+<img src="Lab7/zrzuty/8e.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h5>9 - Notyfikacje redisowe</h5>
+
+<p>Program który będzie nasłuchiwał na każdą zmianę klucza.</p>
+
+<img src="Lab7/zrzuty/9a.png" alt="apiv2_filter_result"  style="float: left;" /><br><br>
+
+<h3>Thumbnail</h3>
+<br><br>
+
+<img src="Lab7/zrzuty/10.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Po przesłaniu zdjęcia dostajemy zip'a z oryginalnym zdjęciem oraz tym przekonwertowanym do rozdzielczości 128x128</p>
+
+<img src="Lab7/zrzuty/11.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Zapis wykonania procesu w oknie z Celery</p>
+
+<img src="Lab7/zrzuty/12.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<h3>Celery Beat</h3>
+
+<p>Do wykonania naszych tasków wymagana jest praca na 4 wierszach poleceń. W jednym mamy włączony nasz serwer związany z aplikacją, w drugim redis-server, w trzecim aktywujemy celery, a w czwartym wywołujemy nasze taski do wykonania</p>
+
+<img src="Lab7/zrzuty/13.png" alt="apiv2_filter_result"  style="float: left;" />
+
+<p>Taski</p>
+
+<img src="Lab7/zrzuty/14.png" alt="apiv2_filter_result"  style="float: left;" />
+
+
+
+
+
 
