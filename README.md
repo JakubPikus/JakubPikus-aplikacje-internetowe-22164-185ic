@@ -434,6 +434,43 @@ Wystarczy użyć następującej komendy, która wyciąga wartości style diva o 
 <img src="Lab7/zrzuty/14.png" alt="apiv2_filter_result"  style="float: left;" />
 
 
+# Lab8
+
+<br><br>
+
+
+<img src="Lab8/zrzuty/1.png" alt="vs_login"  style="float: left;" />
+<br>
+<p>Chat został odzielony od części drugiej z Web Workerami</p>
+
+<h3>Chat</h3>
+<br>
+<img src="Lab8/zrzuty/2.png" alt="vs_register"  style="float: left;" />
+<br>
+<p>Wpisujemy nazwę pokoju</p>
+
+<br>
+<img src="Lab8/zrzuty/3.png" alt="vs_register"  style="float: left;" />
+<br>
+<p>Wiadomości wyświetlają się w nowym okienku chatu</p>
+<br>
+<h3>Web Workers</h3>
+
+<br>
+<img src="Lab8/zrzuty/4.png" alt="vs_register"  style="float: left;" />
+<br>
+<p>Wypisywanie liczb pierwszych z określonego zakresu</p>
+<br>
+<img src="Lab8/zrzuty/5.png" alt="vs_register"  style="float: left;" />
+<br>
+<p>Wypisywanie określonej ilości kolejnych liczb ciągu Fibonaciiego</p>
+<br>
+<img src="Lab8/zrzuty/6.png" alt="vs_register"  style="float: left;" />
+<br>
+<p>Zapis powyższych akcji w wierszu poleceń</p>
+
+
+
 
 
 
