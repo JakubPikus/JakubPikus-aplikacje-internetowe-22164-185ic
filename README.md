@@ -485,8 +485,21 @@ Wystarczy użyć następującej komendy, która wyciąga wartości style diva o 
 <img src="Lab9/zrzuty/6.png" alt="vs_login"  style="float: left;" />
 <img src="Lab9/zrzuty/7.png" alt="vs_login"  style="float: left;" />
 
+# Lab10
 
+<br><br>
+<h3>Aplikacja ToDo</h3>
 
-
-
-
+<p>Dodajemy nowy task incomplete</p>
+<img src="Lab10/zrzuty/2.png" alt="vs_login"  style="float: left;" />
+<img src="Lab10/zrzuty/1.png" alt="vs_login"  style="float: left;" />
+<br>
+<p>Nowy task complete</p>
+<img src="Lab10/zrzuty/4.png" alt="vs_login"  style="float: left;" />
+<img src="Lab10/zrzuty/3.png" alt="vs_login"  style="float: left;" />
+<br>
+<p>Widok Django REST framework</p>
+<img src="Lab10/zrzuty/5.png" alt="vs_login"  style="float: left;" />
+<br>
+<p>Widok Django administration</p>
+<img src="Lab10/zrzuty/6.png" alt="vs_login"  style="float: left;" />
