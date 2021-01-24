@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"  />
+    <title>Fibonacci number generator</title>
+    <style>
+      body {
+        width: 500px;
+      }
+
+      div, p {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+
+  <form>
+    <div>
+      <label for="number">Podaj ilość liczb do wypisania w ciągu Fibonaciiego.</label>
+      <input type="number" id="number">
+    </div>
+    <div>
+      <input type="submit">
+    </div>
+  </form>
+    <p id="result"></p>
+<script id="fibonacci" type="javascript/worker">
+    self.onmessage = function(e) {
+        let userNum = Number(e.data);
+        fibonacci(userNum);
+      }
+      
+      
+      function fibonacci(num){
+      let t = [];
+      let a = 1, b = 0, temp;
+        while (num >= 0){
+          temp = a;
+          a = a + b;
+          b = temp;
+          t.push(a)
+          num--;
+        }
+      
+        self.postMessage(t);
+      }
+</script>
+<script>
+    var blob = new Blob([document.querySelector('#fibonacci').textContent]);
+    blobURL = window.URL.createObjectURL(blob);
+    var form = document.querySelector('form');
+    var input = document.querySelector('input[type="number"]');
+    var result = document.querySelector('p#result');
+    var worker = new Worker(blobURL);
+
+    worker.onmessage = function(event) {
+      result.textContent = event.data;
+      console.log('Got: ' + event.data + '\n');
+    };
+
+    worker.onerror = function(error) {
+      console.log('Worker error: ' + error.message + '\n');
+      throw error;
+    };
+
+    form.onsubmit = function(e) {
+      e.preventDefault();
+      worker.postMessage(input.value);
+      input.value = '';
+    }
+
+  </script>
+  </body>
+</html>
