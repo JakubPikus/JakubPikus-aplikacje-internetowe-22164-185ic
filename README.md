@@ -464,6 +464,27 @@ Wystarczy użyć następującej komendy, która wyciąga wartości style diva o 
 <p>Zapis powyższych akcji w wierszu poleceń</p>
 
 
+# Lab9
+
+<br><br>
+<h3>Aplikacja CRUD</h3>
+
+
+<img src="Lab9/zrzuty/1.png" alt="vs_login"  style="float: left;" />
+<p>Dodajemy nowy tutorial</p>
+<img src="Lab9/zrzuty/2.png" alt="vs_login"  style="float: left;" />
+<br>
+<img src="Lab9/zrzuty/3.png" alt="vs_login"  style="float: left;" />
+<p>Zapis widnieje w spisie wszystkich tutoriali</p>
+<br>
+<p>Po aktualizacji</p>
+<img src="Lab9/zrzuty/4.png" alt="vs_login"  style="float: left;" />
+<img src="Lab9/zrzuty/5.png" alt="vs_login"  style="float: left;" />
+<br>
+<p>Po opublikowaniu</p>
+<img src="Lab9/zrzuty/6.png" alt="vs_login"  style="float: left;" />
+<img src="Lab9/zrzuty/7.png" alt="vs_login"  style="float: left;" />
+
 
 
 
